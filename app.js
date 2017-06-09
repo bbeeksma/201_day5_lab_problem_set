@@ -64,16 +64,21 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var calculatedMultiply = multiply(a, parseInt(multiply(b,c)[0]))[0];
   console.log('calculatedMultiply :: ' + calculatedMultiply);
 
+  var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + calculatedSum + '.';
+  console.log('sumString :: ' + sumString);
+  var multiplyString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + calculatedMultiply + '.';
+  console.log('sumString :: ' + multiplyString);
+
   return[
     calculatedSum
     ,calculatedMultiply
-    ,a + ' and ' + b + ' and ' + c + ' sum to ' + calculatedSum + '.'
-    ,'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + calculatedMultiply + '.'
+    ,sumString
+    ,multiplyString
   ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+//testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
