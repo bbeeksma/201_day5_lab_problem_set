@@ -100,7 +100,8 @@ function sumArray(testArray){ //eslint-disable-line
   console.log('calculatedSum :: ' + calculatedSum);
 
   return[
-
+    calculatedSum
+    ,testArray + ' was passed in as an array of numbers, and ' + calculatedSum + ' is their sum.'
   ];
 
 }
