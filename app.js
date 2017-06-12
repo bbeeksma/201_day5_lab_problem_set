@@ -150,16 +150,17 @@ function multiplyAnswer(a,b){
 function multiplyArray(testArray){ //eslint-disable-line
   var arrayValue;
   var calculatedMultiply = 1;
-  for(var i = 0;i < testArray.length; i++){
-    arrayValue = testArray[i];
-    calculatedMultiply = multiplyAnswer(arrayValue,calculatedMultiply);
-    console.log('calculatedMultiply :: ' + calculatedMultiply);
-    console.log('The numbers ' + testArray + ' have a product of 24.');
+  if (testArray){
+    for(var i = 0;i < testArray.length; i++){
+      arrayValue = testArray[i];
+      calculatedMultiply = multiplyAnswer(arrayValue,calculatedMultiply);
+      console.log('calculatedMultiply :: ' + calculatedMultiply);
+      console.log('The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.');
+    }
   }
-
   return[
     calculatedMultiply
-    ,'The numbers ' + testArray + ' have a product of 24.'
+    ,'The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.'
   ];
 
 }
