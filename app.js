@@ -150,19 +150,28 @@ function multiplyAnswer(a,b){
 function multiplyArray(testArray){ //eslint-disable-line
   var arrayValue;
   var calculatedMultiply = 1;
-  if (testArray){
+  if(testArray.length > 0){
     for(var i = 0;i < testArray.length; i++){
-      arrayValue = testArray[i];
-      calculatedMultiply = multiplyAnswer(arrayValue,calculatedMultiply);
-      console.log('calculatedMultiply :: ' + calculatedMultiply);
-      console.log('The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.');
+      if (!isNaN(testArray[i] && testArray[i] !== null)){
+        arrayValue = testArray[i];
+        calculatedMultiply = multiplyAnswer(arrayValue,calculatedMultiply);
+        console.log('calculatedMultiply :: ' + calculatedMultiply);
+        console.log('The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.');
+      }
+      else{
+        console.log('You broke it! put numbers in your array!');
+        return 'You broke it! put numbers in your array!';
+      }
     }
+    return[
+      calculatedMultiply
+      ,'The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.'
+    ];
   }
-  return[
-    calculatedMultiply
-    ,'The numbers ' + testArray + ' have a product of ' + calculatedMultiply + '.'
-  ];
-
+  else{
+    console.log('You broke it! put numbers in your array!');
+    return 'You broke it! put numbers in your array!';
+  }
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
